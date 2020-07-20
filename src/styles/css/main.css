@@ -1,0 +1,57 @@
+/* Colors */
+/* Font Families */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+/* Type Scale */
+.text-small {
+  font-size: 1.6rem;
+}
+
+.text-medium {
+  font-size: 2rem;
+}
+
+.text-large {
+  font-size: 5.3rem;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.title-xlarge {
+  font-size: 11.3rem;
+  font-weight: 800;
+  letter-spacing: -.8rem;
+  line-height: 10.9rem;
+}
+
+.subtitle-xlarge {
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: -.13rem;
+  line-height: 2.4rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: white;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope", sans-serif;
+  color: #212121;
+  line-height: 1;
+}
+/*# sourceMappingURL=main.css.map */
