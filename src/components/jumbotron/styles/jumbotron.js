@@ -20,15 +20,15 @@ export const Pane = styled.div`
 
     @media(max-width: 1000px) {
         width: 100%;
-        padding: 0 45px;
+        padding: 0 4.5rem;
         text-align: center;
     }
 `;
 
 export const Item = styled.div`
     display: flex;
-    border-bottom: 8px solid  #222;
-    padding: 50px 5%;
+    border-bottom: .8rem solid  #222;
+    padding: 5rem 5%;
     color: white;
     overflow: hidden;
 `;
@@ -38,28 +38,28 @@ export const Container = styled.section`
 
     @media(max-width: 1000px) {
         ${Item}:last-of-type h2 {
-            margin-bottom: 50px;
+            margin-bottom: 5rem;
         }
     }
 `;
 
 export const Title = styled.h1`
-    font-size: 50px;
+    font-size: 5rem;
     line-height: 1.1;
-    margin-bottom: 8px;
+    margin-bottom: .8rem;
 
     @media(max-width: 600px) {
-        font-size: 35px;
+        font-size: 3.5rem;
     }
 `;
 
 export const SubTitle = styled.h2`
-        font-size: 26px;
+        font-size: 2.6rem;
         font-weight: normal;
         line-height: normal;
 
         @media(max-width: 600px) {
-            font-size: 18px;
+            font-size: 1.8rem;
         }
 `;
 
