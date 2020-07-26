@@ -10,7 +10,7 @@ export const Inner = styled.div`
     padding: 70px 45px;
     flex-direction: column;
     margin: auto;
-    max-width: 815px;
+    width: 815px;
 `;
 export const Item = styled.div`
    color: white;
@@ -21,7 +21,7 @@ export const Item = styled.div`
    }
 `;
 export const Frame = styled.div`
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 `;
 export const Title = styled.h1`
     font-size: 5rem;
@@ -42,6 +42,16 @@ export const Header = styled.div`
     padding: .8em 0;
     user-select:none;
     align-items:center;
+    width: 100%;
+
+    img {
+        filter: brightness(0) invert(1);
+        height: 24px;
+
+        @media(max-width: 600px) {
+            height: 16px;
+    }
+    }
 
     @media(max-width: 600px) {
         font-size: 1.6rem;
@@ -55,6 +65,7 @@ export const Body = styled.div`
     padding: 0.8em 0;
     user-select: none;
     align-items: center;
+    width: 100%;
     transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
 
     @media(max-width: 600px) {
