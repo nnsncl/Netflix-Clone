@@ -7,18 +7,24 @@ export function FaqsContainer() {
         <Accordion>
             <Accordion.Title>Fequently Asked Questions</Accordion.Title>
             <Accordion.Frame>
-            {FaqsData.map((item) => (
-                <Accordion.Item key={item.id}>
-                    <Accordion.Header>{item.header}</Accordion.Header>
-                    <Accordion.Body>{item.body}</Accordion.Body>
-                </Accordion.Item>
-            ))}
+                {FaqsData.map((item) => (
+                    <Accordion.Item key={item.id}>
+                        <Accordion.Header>{item.header}</Accordion.Header>
+                        <Accordion.Body>{item.body}</Accordion.Body>
+                    </Accordion.Item>
+                ))}
             </Accordion.Frame>
             <OptForm>
-                <OptForm.Input placeholder='hahaha'>
+                <OptForm.Input placeholder='Email adress'>
 
                 </OptForm.Input>
+                <OptForm.Button>
+                    Get Started
+                </OptForm.Button>
             </OptForm>
+            <OptForm.Content>
+                    Ready to watch? Enter your email to create or restart your membership.
+                </OptForm.Content>
         </Accordion>
     )
 }
