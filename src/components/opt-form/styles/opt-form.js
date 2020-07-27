@@ -1,31 +1,60 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    margin: 0 auto;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    margin-top: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
 `;
 export const Input = styled.input`
-    height: 48px;
-    padding: 10px;
-    min-width:33vw;
+    width: 77%;
+    border: 0;
+    padding: 0 23px;
+    height: 70px;
     
     &::placeholder{
-        font-size: 14px;
+        font-size: 16px;
     }
 
     &:focus, &:active{
         outline: none;
     }
+
+    @media (max-width: 1000px) {
+        width: 100%;
+    }
 `;
 export const Button = styled.button`
-    height: 48px;
-    padding: 0 10px;
+    background: #db0510;
     color: white;
-    border: none;
-    background: red;
+    height: 70px;
+    padding: 0 23px;
+    border:0; 
+    font-size: 23px;
+    width: 23%;
+    transition: ease .2s;
+    line-height: 0;
+
+    &:hover{
+        cursor: pointer;
+        background: #f40612;
+    }
+
+    @media (max-width: 1000px) {
+        margin-top: 23px;
+        width: 50%;
+    }
 `;
 export const Content = styled.h3`
     font-size: 1.8rem;
-    padding: 0 3rem;
+    font-weight: 400;
+    padding: 23px 0;
+    text-align: center;
 `;
