@@ -3,13 +3,14 @@ import { JumbotronContainer } from '../containers/jumbotron'
 import { FaqsContainer } from '../containers/faqs'
 import { FooterContainer } from '../containers/footer'
 import { HeaderContainer } from '../containers/header'
+import { FeatureContainer } from '../containers/feature'
 
 
 export default function Home() {
     return (
         <>
             <HeaderContainer>
-                <p>Test</p>
+                <FeatureContainer />
             </HeaderContainer>
             <JumbotronContainer />
             <FaqsContainer />
