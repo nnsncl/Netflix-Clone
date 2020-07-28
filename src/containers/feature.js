@@ -11,10 +11,10 @@ export function FeatureContainer() {
                 <OptForm.Input placeholder='Email adress' />
                 <OptForm.Button>
                     Get Started
-        </OptForm.Button>
+                </OptForm.Button>
                 <OptForm.Content>
                     Ready to watch? Enter your email to create or restart your membership.
-        </OptForm.Content>
+                </OptForm.Content>
             </OptForm>
         </Feature>
 
