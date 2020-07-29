@@ -27,7 +27,7 @@ Form.Button = function FormButton({ children, ...restProps }){
     return <Button {...restProps} >{children}</Button>
 }
 
-Form.Content = function FormContent({children, ...restProps}){
+Form.Title = function FormTitle({children, ...restProps}){
     return <Title {...restProps} >{children}</Title>
 }
 
