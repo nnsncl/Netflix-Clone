@@ -22,6 +22,7 @@ export default function Signin() {
                 <Form.Container onSubmit={handleSignIn} method="POST">
                 <Form.Title>Sign In</Form.Title>
                     <Form.Input
+                        type='email'
                         placeholder='Email adress'
                         value={emailValue}
                         onChange={({ target }) => setEmailValue(target.value)}
@@ -33,6 +34,7 @@ export default function Signin() {
                         value={password}
                         onChange={({ target }) => setPaswword(target.value)}
                     />
+                    <Form.Helper>Password must include at least 8 characters.</Form.Helper>
                     <Form.Button
                         disabled={formValidation}
                         type="submit" >
