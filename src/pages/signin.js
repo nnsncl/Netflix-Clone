@@ -16,10 +16,11 @@ export default function Signin() {
     return (
         <HeaderContainer>
             <Form>
-                <Form.Title>Sign In</Form.Title>
+               
                 {error && <Form.Helper>{error}</Form.Helper>}
 
                 <Form.Container onSubmit={handleSignIn} method="POST">
+                <Form.Title>Sign In</Form.Title>
                     <Form.Input
                         placeholder='Email adress'
                         value={emailValue}
@@ -28,7 +29,7 @@ export default function Signin() {
                     <Form.Input
                         type='password'
                         autoComplete='off'
-                        placeholder='Email adress'
+                        placeholder='••••••••'
                         value={password}
                         onChange={({ target }) => setPaswword(target.value)}
                     />
