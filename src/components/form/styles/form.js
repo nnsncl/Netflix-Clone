@@ -28,7 +28,7 @@ export const Frame = styled.form`
 export const Input = styled.input`
     border-radius: 4px;
     background: #333;
-    border: 0;
+    border: 1px solid transparent;
     color: #fff;
     height: 50px;
     line-height: 50px;
@@ -38,6 +38,7 @@ export const Input = styled.input`
 
     &:hover{
         background: #454545;
+        border: 1px solid rgba(255,255,255,.3);
         box-shadow: 0px 0px 0px 3px rgba(255,255,255,.3);
 
         &::placeholder{
@@ -49,6 +50,7 @@ export const Input = styled.input`
     &:focus, &:active{
         outline: none;
         background: #454545;
+        border: 1px solid rgba(255,255,255,.3);
     }
 
     &:last-of-type{
