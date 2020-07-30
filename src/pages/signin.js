@@ -19,18 +19,30 @@ export default function Signin() {
                 <Form.Title>Sign In</Form.Title>
                 {error && <Form.Helper>{error}</Form.Helper>}
 
-                <Form.Container onSubmit={handleSignIn}  method="POST">
+                <Form.Container onSubmit={handleSignIn} method="POST">
                     <Form.Input
                         placeholder='Email adress'
                         value={emailValue}
                         onChange={({ target }) => setEmailValue(target.value)}
                     />
                     <Form.Input
+                        type='password'
+                        autoComplete='off'
                         placeholder='Email adress'
                         value={password}
                         onChange={({ target }) => setPaswword(target.value)}
                     />
-                    <Form.Button></Form.Button>
+                    <Form.Button
+                        disabled={false}
+                        type="submit" >
+                        Sign In
+                        </Form.Button>
+                    <Form.Content>
+                        New to Netflix? <Form.Link to="/signup">Sign up now.</Form.Link>
+                    </Form.Content>
+                    <Form.ContentSmall>
+                        This page is protected by Google reCAPTCHA.
+                    </Form.ContentSmall>
                 </Form.Container>
             </Form>
         </HeaderContainer>
