@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form } from '../components'
 import { HeaderContainer } from '../containers/header'
+import { FooterContainer } from '../containers/footer'
 
 export default function Signin() {
     const [error, setError] = useState('');
@@ -16,6 +17,7 @@ export default function Signin() {
     }
 
     return (
+        <>
         <HeaderContainer>
             <Form>
                 {error && <Form.Helper>{error}</Form.Helper>}
@@ -49,5 +51,7 @@ export default function Signin() {
                 </Form.Container>
             </Form>
         </HeaderContainer>
+        <FooterContainer />
+        </>
     )
 }
