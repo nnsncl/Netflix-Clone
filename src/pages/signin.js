@@ -7,6 +7,8 @@ export default function Signin() {
     const [emailValue, setEmailValue] = useState('')
     const [password, setPaswword] = useState('')
 
+    const formValidation = emailValue === '' || !emailValue.includes('@') || password === '' || password.length < 8
+
     const handleSignIn = (event) => {
         event.preventDefault()
         // call in here to firebase to authenticate the user
@@ -16,9 +18,7 @@ export default function Signin() {
     return (
         <HeaderContainer>
             <Form>
-               
                 {error && <Form.Helper>{error}</Form.Helper>}
-
                 <Form.Container onSubmit={handleSignIn} method="POST">
                 <Form.Title>Sign In</Form.Title>
                     <Form.Input
@@ -34,7 +34,7 @@ export default function Signin() {
                         onChange={({ target }) => setPaswword(target.value)}
                     />
                     <Form.Button
-                        disabled={false}
+                        disabled={formValidation}
                         type="submit" >
                         Sign In
                         </Form.Button>

@@ -64,6 +64,12 @@ export const Button = styled.button`
         cursor: pointer;
         background: #f40612;
     }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
     `;
 export const Title = styled.h1`
     font-size: 3.2rem;
