@@ -48,7 +48,8 @@ export const ButtonLink = styled(ReachRouterLink)`
     display:block;
     font-size: 1.6rem;
     background-color: #db0510;
-    padding: 9px 19px;
+    padding: 13px 19px;
+    line-height: 1;
     transition: .2s ease;
     border: 0;
     border-radius: 4px;
