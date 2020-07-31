@@ -32,7 +32,7 @@ export default function Signin() {
                     <Form.Input
                         type='password'
                         autoComplete='off'
-                        placeholder='••••••••'
+                        placeholder='Password'
                         value={password}
                         onChange={({ target }) => setPaswword(target.value)}
                     />
