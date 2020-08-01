@@ -14,16 +14,6 @@ export const Title = styled.h1`
     line-height: 1.1;
     margin-bottom: .8rem;
 `;
-export const List = styled.ul`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    transition: .2s ease;
-
-    @media(max-width: 813px){
-        flex-direction: column;
-    }
-`;
 export const User = styled.div`
     display: flex;
     flex-direction: column;
@@ -47,11 +37,10 @@ export const Picture = styled.img`
     transition: ease .2s;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         border: 3px solid rgba(255,255,255, 1);
         box-shadow: 0px 0px 0px 9px rgba(255,255,255,.1);
     }
-
     @media(max-width: 813px){
         height: 33vw;
         width: 33vw;
@@ -65,9 +54,20 @@ export const UserName = styled.p`
     margin: 13px 0;
     text-overflow: ellipsis;
     overflow: hidden;
-    transition: .2s ease;
+    transition: .2s ease-in-out;
+`;
 
-    &:hover {
+export const List = styled.ul`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: .2s ease-in-out;
+
+    @media(max-width: 813px){
+        flex-direction: column;
+    }
+    
+    &:hover ${UserName} {
         cursor: pointer;
         color: white;
     }
