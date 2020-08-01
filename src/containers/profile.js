@@ -17,14 +17,14 @@ export function ProfileContainer({ user, setProfile }) {
             <Profile>
                 <Profile.Title>Who's watching?</Profile.Title>
                 <Profile.List>
-                <Profile.User
+                    <Profile.User
                         onClick={() => setProfile({
                             displayName: user.displayName,
                             photoURL: user.photoURL
                         })}
                     >
-                    <Profile.Picture src={user.pictureURL} />
-                    <Profile.UserName>{user.displayName}</Profile.UserName>
+                        <Profile.Picture src={user.pictureURL} />
+                        <Profile.UserName>{user.displayName}</Profile.UserName>
                     </Profile.User>
                 </Profile.List>
             </Profile>
