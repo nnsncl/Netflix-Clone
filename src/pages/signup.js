@@ -1,23 +1,49 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+
+import { useHistory } from 'react-router-dom'
+
+import { FirebaseContext } from '../context/firebase'
 
 import { HeaderContainer } from '../containers/header'
 import { Form } from '../components'
 import { FooterContainer } from '../containers/footer'
+
 import * as ROUTES from '../constants/routes';
+
 
 export default function Signup() {
 
+    const history = useHistory()
+
+    const { firebase } = useContext(FirebaseContext)
+
     const [error, setError] = useState('');
     const [firstName, setFirstName] = useState('')
-    const [emailValue, setEmailValue] = useState('')
+    const [emailAddress, setemailAddress] = useState('')
     const [password, setPaswword] = useState('')
 
-    const formValidation = firstName === '' || emailValue === '' || !emailValue.includes('@') || password === '' || password.length < 8
+    const formValidation = firstName === '' || emailAddress === '' || !emailAddress.includes('@') || password === '' || password.length < 8
 
     const handleSignUp = (event) => {
         event.preventDefault()
-        // call in here to firebase to authenticate the user
-        // if there's an error, populate the error state
+
+        firebase
+            .auth()
+            .createUserWithEmailAndPassword(emailAddress, password)
+            .then((result) => 
+                result.user
+                .updateProfile({
+                    displayName: firstName,
+                    photoURL: Math.floor(Math.random() * 5 ) + 1,
+                })
+                .then(() => {
+                    setemailAddress('');
+                    setPaswword('')
+                    setError('')
+                    history.push(ROUTES.BROWSE)
+                })
+            ).catch((error) => setError(error.message))
+
     }
 
     return (
@@ -37,8 +63,8 @@ export default function Signup() {
                             type='email'
                             autoComplete='off'
                             placeholder='Email address'
-                            value={emailValue}
-                            onChange={({ target }) => setEmailValue(target.value)}
+                            value={emailAddress}
+                            onChange={({ target }) => setemailAddress(target.value)}
                         />
                         <Form.Input
                             type='password'

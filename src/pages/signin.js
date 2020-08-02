@@ -5,10 +5,10 @@ import { FooterContainer } from '../containers/footer'
 
 export default function Signin() {
     const [error, setError] = useState('');
-    const [emailValue, setEmailValue] = useState('')
+    const [emailAddress, setemailAddress] = useState('')
     const [password, setPaswword] = useState('')
 
-    const formValidation = emailValue === '' || !emailValue.includes('@') || password === '' || password.length < 8
+    const formValidation = emailAddress === '' || !emailAddress.includes('@') || password === '' || password.length < 8
 
     const handleSignIn = (event) => {
         event.preventDefault()
@@ -26,8 +26,8 @@ export default function Signin() {
                     <Form.Input
                         type='email'
                         placeholder='Email adress'
-                        value={emailValue}
-                        onChange={({ target }) => setEmailValue(target.value)}
+                        value={emailAddress}
+                        onChange={({ target }) => setemailAddress(target.value)}
                     />
                     <Form.Input
                         type='password'
