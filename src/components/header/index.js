@@ -6,6 +6,7 @@ import {
     Container,
     Feature,
     Logotype,
+    LogoTitle,
     Title,
     Content,
     Button,
@@ -37,6 +38,10 @@ Header.Logotype = function HeaderLogotype({ to, ...restProps }) {
             <Logotype {...restProps} />
         </ReachRouterLink>
     )
+}
+
+Header.LogoTitle = function HeaderLogoTitle({ src, alt, ...restProps }) {
+    return <LogoTitle src={src} alt={alt} {...restProps} />
 }
 
 Header.Title = function HeaderTitle({ children, ...restProps }) {

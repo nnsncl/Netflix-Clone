@@ -31,13 +31,13 @@ export const Container = styled.div`
 export const Feature = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 380px 56px 95px 56px;
+    padding: 190px 56px 95px 56px;
     width: 50%;
     max-width: 1589px;
     background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%);
 
     @media(max-width: 1281px){
-        width: 100%;
+        width: 66.6%;
     }
 
     @media(max-width: 813px){
@@ -66,6 +66,13 @@ export const Link = styled.a`
 export const Logotype = styled.img`
     height: 36px;
     margin-right: 40px;
+`;
+
+export const LogoTitle = styled.img`
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin-bottom: 36px;
 `;
 
 export const Title = styled.h2`

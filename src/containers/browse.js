@@ -42,7 +42,8 @@ export function BrowseContainer() {
                     </Header.Group>
                 </Header.Frame>
                 <Header.Feature>
-                        <Header.Title>Dorohedoro</Header.Title>
+                        <Header.LogoTitle src='/images/misc/dorohedoro_logo.png' alt='dorohedoro' />
+                        {/* <Header.Title>Dorohedoro</Header.Title> */}
                         <Header.Content>Sorcerers regularly visit the Hole in order to practice their magic on human victims, leading to huge numbers of disfigured survivors. Hospitals have been set up to deal with the ever-growing numbers of magic victims, but humans can do little to repel sorcerers.</Header.Content>
                         <Header.Button>Watch now</Header.Button>
                     </Header.Feature>
