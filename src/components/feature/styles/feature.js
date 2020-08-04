@@ -35,10 +35,15 @@ export const Subtitle = styled.h2`
 `;
 
 export const Link = styled(ReachRouterLink)`
-    background: red;
+    background: #db0510;
     font-size: 2.3rem;
     color: white;
     text-decoration: none;
     padding: 23px 59px;
     border-radius: 4px;
+    transition: .2s ease;
+
+    &:hover{
+        background: #f40612;
+    }
 `;
