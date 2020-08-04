@@ -1,7 +1,14 @@
 import React from 'react'
 import { Link as ReachRouterLink } from 'react-router-dom'
 
-import { Background, Container, Logotype, ButtonLink } from './styles/header'
+import {
+    Background,
+    Container,
+    Logotype,
+    ButtonLink,
+    Group,
+    Link,
+} from './styles/header'
 
 export default function Header({
     background = true,
@@ -26,4 +33,12 @@ Header.Logotype = function HeaderLogotype({ to, ...restProps }) {
 
 Header.ButtonLink = function HeaderButtonLink ({ to, children, ...restProps }) {
     return <ButtonLink {...restProps} to={to} >{children}</ButtonLink>
+}
+
+Header.Group = function HeaderGroup({ children, ...restProps }){
+    return <Group {...restProps}>{children}</Group>
+}
+
+Header.Link = function HeaderTextLink({ children, ...restProps }){
+    return <Link {...restProps}>{children}</Link>
 }

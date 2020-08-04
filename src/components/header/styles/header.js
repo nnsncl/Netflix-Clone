@@ -6,10 +6,11 @@ export const Background = styled.div`
     flex-direction: column;
     background: url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover no-repeat;
 
-    @media (max-width: 1100px) {
+    @media (max-width: 813px) {
         ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;` }
     }
 `;
+
 export const Container = styled.div`
     display: flex;
     margin: 0 56px;
@@ -27,10 +28,17 @@ export const Container = styled.div`
     }
 
 `;
-export const Link = styled.p`
+
+export const Group = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+export const Link = styled.a`
+    font-size: 1.6rem;
     text-decoration: none;
     color: white;
-    margin-right: 30px;
+    margin-right: 23px;
     cursor: pointer;
     font-weight: ${({ active })=> (active === 'true' ? '700' : 'normal')};
 
@@ -38,10 +46,12 @@ export const Link = styled.p`
         margin-right: 0;
     }
 `;
+
 export const Logotype = styled.img`
     height: 36px;
     margin-right: 40px;
 `;
+
 export const ButtonLink = styled(ReachRouterLink)`
     text-decoration:none;
     color: white;
@@ -59,3 +69,5 @@ export const ButtonLink = styled(ReachRouterLink)`
         background: #f40612;
     }
 `;
+
+export const TextLink = styled.a``;
