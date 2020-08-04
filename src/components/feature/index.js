@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Title, Subtitle } from './styles/feature'
+import { Container, Title, Subtitle, Link } from './styles/feature'
 
 export default function Feature({children, ...restProps}){
     return(
@@ -13,4 +13,8 @@ Feature.Title = function FeatureTitle({children, ...restProps}){
 
 Feature.Subtitle = function FeatureSubtitle({children, ...restProps}){
     return <Subtitle {...restProps} >{children}</Subtitle>
+}
+
+Feature.Link = function FeatureLink({children, ...restProps}){
+    return <Link {...restProps} >{children}</Link>
 }

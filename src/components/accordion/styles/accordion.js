@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.section`
     display: flex;
     border-bottom: 8px solid #222;
+    margin-top: 95px;
 `;
 
 export const Inner = styled.div`
@@ -10,7 +11,13 @@ export const Inner = styled.div`
     padding: 70px 45px;
     flex-direction: column;
     margin: auto;
-    width: 815px;
+    width: 50%;
+    max-width: 50%;
+
+    @media(max-width:813px){
+        width: 100%;
+        max-width: 100%;
+    }
 `;
 export const Item = styled.div`
    color: white;
@@ -28,7 +35,7 @@ export const Title = styled.h1`
     line-height: 1.1;
     margin: 0 0 8px 0;
 
-    @media(max-width: 600px) {
+    @media(max-width: 813px) {
         font-size: 3.5rem;
     }
 `;

@@ -6,29 +6,26 @@ export const Inner = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-direction: ${({ direction }) => direction};
-    max-width: 1400px;
+    padding: 56px;
     margin: auto;
-    width: 100%;
+    max-width: 100%;
 
-    @media(max-width: 1000px) {
+    @media(max-width: 813px) {
+        max-width: 100%;
         flex-direction: column;
     }
 `;
 
 export const Pane = styled.div`
-    width: 50%;
+    width: 45%;
 
-    @media(max-width: 1000px) {
+    @media(max-width: 813px) {
         width: 100%;
-        padding: 0 4.5rem;
-        text-align: center;
     }
 `;
 
 export const Item = styled.div`
     display: flex;
-    border-bottom: .8rem solid  #222;
-    padding: 5rem 5%;
     color: white;
     overflow: hidden;
 `;
@@ -36,7 +33,7 @@ export const Item = styled.div`
 export const Container = styled.section`
     background: black;
 
-    @media(max-width: 1000px) {
+    @media(max-width: 813px) {
         ${Item}:last-of-type h2 {
             margin-bottom: 5rem;
         }
@@ -44,26 +41,29 @@ export const Container = styled.section`
 `;
 
 export const Title = styled.h1`
-    font-size: 5rem;
+    font-size: 5.6rem;
+    font-weight: 800;
     line-height: 1.1;
-    margin-bottom: .8rem;
+    margin-bottom: 36px;
 
-    @media(max-width: 600px) {
-        font-size: 3.5rem;
+    @media(max-width: 813px) {
+        font-size: 3.6rem;
     }
 `;
 
-export const SubTitle = styled.h2`
-        font-size: 2.6rem;
-        font-weight: normal;
-        line-height: normal;
-
-        @media(max-width: 600px) {
-            font-size: 1.8rem;
+export const SubTitle = styled.p`
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: white;
+    
+        @media(max-width: 813px) {
+            font-size: 1.6rem;
         }
 `;
 
 export const Image = styled.img`
+    margin-top: 23px;
     max-width: 100%;
     height: auto;
 `;

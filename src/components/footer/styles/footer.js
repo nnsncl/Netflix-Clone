@@ -3,12 +3,12 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 1000px;
-    padding: 70px 56px;
+    max-width: 50%;
+    padding: 95px 56px;
     margin: auto;
 
-    @media (max-width: 1000px) {
-        padding: 70px 30px;
+    @media (max-width: 813px) {
+        max-width: 100%;
     }
 `;
 
@@ -17,8 +17,8 @@ export const Row = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
     grid-gap: 1.5rem;
 
-    @media (max-width: 420px) {
-        grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    @media (max-width: 813px) {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
 `;
 

@@ -5,7 +5,7 @@ import * as ROUTES from '../constants/routes'
 
 export function HeaderContainer({ children }) {
     return (
-        <Header>
+        <Header background={false} >
             <Header.Frame>
                 <Header.Logotype
                     to={ROUTES.HOME}

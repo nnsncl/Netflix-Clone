@@ -6,9 +6,9 @@ import { Background, Container, Logotype, ButtonLink } from './styles/header'
 export default function Header({
     background = true,
     children,
-    ...resttProps }) {
+    ...restProps }) {
     return background ?
-        <Background {...resttProps}>{children}</Background>
+        <Background {...restProps}>{children}</Background>
         : children
 }
 
@@ -16,10 +16,10 @@ Header.Frame = function HeaderFrame({ children, ...resttProps }) {
     return <Container {...resttProps}>{children}</Container>
 }
 
-Header.Logotype = function HeaderLogotype({ to, ...resttProps }) {
+Header.Logotype = function HeaderLogotype({ to, ...restProps }) {
     return (
         <ReachRouterLink to={to}>
-            <Logotype {...resttProps} />
+            <Logotype {...restProps} />
         </ReachRouterLink>
     )
 }

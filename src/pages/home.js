@@ -4,6 +4,8 @@ import { FaqsContainer } from '../containers/faqs'
 import { FooterContainer } from '../containers/footer'
 import { HeaderContainer } from '../containers/header'
 import { FeatureContainer } from '../containers/feature'
+import { ImageSectionContainer } from '../containers/image-section'
+
 
 
 export default function Home() {
@@ -12,6 +14,7 @@ export default function Home() {
             <HeaderContainer>
                 <FeatureContainer />
             </HeaderContainer>
+            <ImageSectionContainer />
             <JumbotronContainer />
             <FaqsContainer />
             <FooterContainer />
