@@ -8,7 +8,7 @@ export const Inner = styled.div`
     flex-direction: ${({ direction }) => direction};
     padding: 56px;
     margin: auto;
-    max-width: 100%;
+    max-width: 1589px;
 
     @media(max-width: 813px) {
         max-width: 100%;
@@ -18,7 +18,7 @@ export const Inner = styled.div`
 
 export const Pane = styled.div`
     width: 45%;
-
+    
     @media(max-width: 813px) {
         width: 100%;
     }
@@ -31,7 +31,6 @@ export const Item = styled.div`
 `;
 
 export const Container = styled.section`
-    background: black;
 
     @media(max-width: 813px) {
         ${Item}:last-of-type h2 {

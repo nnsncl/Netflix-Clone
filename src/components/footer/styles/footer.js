@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 50%;
+    max-width: 1589px;
     padding: 95px 56px;
     margin: auto;
 
@@ -32,19 +32,24 @@ export const Link = styled.a`
     color: #757575;
     font-size: 1.3rem;
     text-decoration: none;
-    margin-bottom: 16px;
+    margin-bottom: 13px;
+    transition: .2s ease;
+
+    &:hover{
+        color:white;
+    }
 `;
 
 export const Title = styled.p`
     color: #757575;
-    font-size: 1.6rem;
-    margin-bottom: 30px;
+    font-size: 2.3rem;
+    margin-bottom: 36px;
 `;
 
 export const Text = styled.p`
     color: #757575;
     font-size: 1.3rem;
-    margin-top: 24px;
+    margin-top: 23px;
 `;
 
 export const Break = styled.p`

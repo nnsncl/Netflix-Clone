@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
         background-color: black;
         color: #333;
         font-size: 62.5%;
+        margin: 0 auto;
     }
 
     h1,h2,h3,h4,h5,h6 {

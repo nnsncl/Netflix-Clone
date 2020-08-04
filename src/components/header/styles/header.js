@@ -13,8 +13,8 @@ export const Background = styled.div`
 export const Container = styled.div`
     display: flex;
     margin: 0 56px;
-    height: 95px;
     padding: 36px 0;
+    height: 95px;
     justify-content: space-between;
     align-items: center;
 

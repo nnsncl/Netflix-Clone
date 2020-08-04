@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import { Link as ReachRouterLink } from 'react-router-dom';
 
 export const Container = styled.section`
-    width: 66.6%;
-    margin: 96px 0;
+    margin: 96px auto;
     text-align: left;
     padding: 36px 56px;
+    max-width: 1589px;
 
     @media(max-width: 813px) {
         width: 100%;
@@ -20,7 +20,7 @@ export const Title = styled.h1`
     overflow-wrap: break-word;
 
     @media(max-width: 813px) {
-        font-size: 6.8rem;
+        font-size: 8.3rem;
         letter-spacing: -3px;
     }
 `;

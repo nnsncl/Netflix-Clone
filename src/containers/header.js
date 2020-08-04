@@ -3,9 +3,9 @@ import { Header } from '../components'
 import * as ROUTES from '../constants/routes'
 
 
-export function HeaderContainer({ children }) {
+export function HeaderContainer({ background, children }) {
     return (
-        <Header background={false} >
+        <Header  background={background}>
             <Header.Frame>
                 <Header.Logotype
                     to={ROUTES.HOME}

@@ -11,7 +11,7 @@ import { ImageSectionContainer } from '../containers/image-section'
 export default function Home() {
     return (
         <>
-            <HeaderContainer>
+            <HeaderContainer background={false} >
                 <FeatureContainer />
             </HeaderContainer>
             <ImageSectionContainer />
