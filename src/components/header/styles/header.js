@@ -23,10 +23,26 @@ export const Container = styled.div`
         display: flex;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 813px) {
         margin: 0 30px;
     }
+`;
 
+export const Feature = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 380px 56px 95px 56px;
+    width: 50%;
+    max-width: 1589px;
+    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%);
+
+    @media(max-width: 1281px){
+        width: 100%;
+    }
+
+    @media(max-width: 813px){
+        display: none;
+    }
 `;
 
 export const Group = styled.div`
@@ -50,6 +66,42 @@ export const Link = styled.a`
 export const Logotype = styled.img`
     height: 36px;
     margin-right: 40px;
+`;
+
+export const Title = styled.h2`
+    font-size: 9.5rem;
+    letter-spacing: -3px;
+    line-height: .9;
+    font-weight: 800;
+    margin: 36px 0;
+    overflow-wrap: break-word;
+`;
+
+export const Content = styled.p`
+    display: block;
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 59px;
+    color: white;
+`;
+
+export const Button = styled.button`
+    background: #db0510;
+    border: none;
+    font-size: 2.3rem;
+    color: white;
+    text-decoration: none;
+    padding: 23px 36px;
+    border-radius: 4px;
+    transition: .2s ease;
+    max-width: 190px;
+    cursor: pointer;
+
+    &:hover{
+        background: #f40612;
+    }
+
 `;
 
 export const ButtonLink = styled(ReachRouterLink)`

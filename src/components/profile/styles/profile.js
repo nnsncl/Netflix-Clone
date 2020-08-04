@@ -12,7 +12,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
     font-size: 5.6rem;
     line-height: 1.1;
-    margin-bottom: .8rem;
+    margin-bottom: 59px;
 `;
 export const User = styled.div`
     display: flex;
@@ -33,7 +33,7 @@ export const Picture = styled.img`
     width: 10vw;
     min-height: 190px;
     min-width: 190px;
-    border-radius: 4px;
+    border-radius: 100%;
     border: 1px solid transparent;
     background-repeat: no-repeat;
     background-size: cover;

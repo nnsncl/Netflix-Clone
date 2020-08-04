@@ -19,7 +19,7 @@ export function BrowseContainer() {
 
     return profile.displayName ? (
         <>
-            <Header src="joker1" dontShowOnSmallViewPort >
+            <Header src="dorohedoro" dontShowOnSmallViewPort >
                 <Header.Frame>
                     <Header.Group>
                         <Header.Logotype
@@ -41,6 +41,12 @@ export function BrowseContainer() {
                         </Header.Link>
                     </Header.Group>
                 </Header.Frame>
+                <Header.Feature>
+                        <Header.Title>Dorohedoro</Header.Title>
+                        <Header.Content>Sorcerers regularly visit the Hole in order to practice their magic on human victims, leading to huge numbers of disfigured survivors. Hospitals have been set up to deal with the ever-growing numbers of magic victims, but humans can do little to repel sorcerers.</Header.Content>
+                        <Header.Button>Watch now</Header.Button>
+                    </Header.Feature>
+
             </Header>
             <FooterContainer />
         </>
