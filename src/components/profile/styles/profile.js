@@ -10,7 +10,7 @@ export const Container = styled.div`
     margin: 190px auto;
 `;
 export const Title = styled.h1`
-    font-size: 5rem;
+    font-size: 5.6rem;
     line-height: 1.1;
     margin-bottom: .8rem;
 `;
@@ -31,19 +31,18 @@ export const User = styled.div`
 export const Picture = styled.img`
     height: 10vw;
     width: 10vw;
-    border-radius: 100%;
+    min-height: 190px;
+    min-width: 190px;
+    border-radius: 4px;
+    border: 1px solid transparent;
     background-repeat: no-repeat;
     background-size: cover;
     transition: ease .2s;
     cursor: pointer;
 
     &:hover {
-        border: 3px solid rgba(255,255,255, 1);
+        border: 1px solid rgba(255,255,255, 1);
         box-shadow: 0px 0px 0px 9px rgba(255,255,255,.1);
-    }
-    @media(max-width: 813px){
-        height: 33vw;
-        width: 33vw;
     }
 `;
 export const UserName = styled.p`

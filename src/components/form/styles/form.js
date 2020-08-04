@@ -5,7 +5,7 @@ export const Container = styled.section`
     display: flex;
     flex-direction: column;
     min-height: 66.6vh;
-    background: rgb(0, 0, 0, 0.6);
+    background: black;
     border-radius: 8px;
     width: 25%;
     margin: 96px auto;
@@ -27,8 +27,8 @@ export const Frame = styled.form`
 `;
 export const Input = styled.input`
     border-radius: 4px;
-    background: #333;
-    border: 1px solid transparent;
+    background: black;
+    border: 1px solid #212121;
     color: #fff;
     height: 50px;
     line-height: 50px;
@@ -37,8 +37,8 @@ export const Input = styled.input`
     transition: ease .2s;
 
     &:hover{
-        background: #454545;
-        border: 1px solid rgba(255,255,255,.3);
+        background: black;
+        border: 1px solid white;
         box-shadow: 0px 0px 0px 3px rgba(255,255,255,.3);
 
         &::placeholder{
@@ -49,7 +49,6 @@ export const Input = styled.input`
     
     &:focus, &:active{
         outline: none;
-        background: #454545;
         border: 1px solid rgba(255,255,255,.3);
     }
 
