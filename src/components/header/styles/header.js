@@ -163,12 +163,89 @@ export const SearchInput = styled.input`
         color: white;       
     }
 
-    margin-left: ${({ active }) => ( active === true ? '13px' : '0' )};
+    margin-left: ${({ active }) => ( active === true ? '9px' : '0' )};
     padding: ${({ active }) => ( active === true ? '0 13px' : '0' )};
     width: ${({ active }) => ( active === true ? '190px' : '0' )};
     opacity: ${({ active }) => ( active === true ? '1' : '0' )};
 
+    @media(max-width: 813px){
+        width: ${({ active }) => ( active === true ? '95px' : '0' )};
+    }
+
     &:active, &:focus{
         outline: none
+    }
+`;
+
+export const Picture = styled.button`
+    background: url(${({ src }) => src});
+    background-size: contain;
+    border-radius: 100%;
+    border: 0;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+
+    &:active, &:focus{
+        outline: none;
+    }
+`;
+
+
+export const Dropdown = styled.div`
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 4px;
+    padding: 23px 36px;
+    top: 36px;
+    right: 0;
+
+    ${Group}:last-of-type ${Link} {
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    ${Group} {
+    margin-bottom: 23px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+
+        ${Link}, ${Picture} {
+            cursor: default;
+        }
+
+        &:last-of-type {
+            margin-bottom: 9px;
+            padding-bottom: 0;
+            border-bottom: none; 
+        }
+        
+    }
+
+    button {
+        margin-right: 13px;
+    }
+    
+    p {
+        font-size: 13px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+`;
+
+export const Profile = styled.div`
+    display: flex;
+    align-items: center;
+    margin-left: 23px;
+    position: relative;
+
+    button {
+        cursor: pointer;
+    }
+
+    &:hover > ${Dropdown} {
+        display: flex;
+        flex-direction: column;
     }
 `;

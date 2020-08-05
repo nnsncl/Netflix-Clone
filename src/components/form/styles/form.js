@@ -85,7 +85,7 @@ export const Title = styled.h1`
     margin-bottom: .8rem;
     padding: 0 0 33px 0;
 
-    @media(max-width: 600px) {
+    @media(max-width: 813px) {
         font-size: 3.5rem;
     }
 `;

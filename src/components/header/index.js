@@ -16,6 +16,10 @@ import {
     Search,
     SearchIcon,
     SearchInput,
+    Profile,
+    Picture,
+    Dropdown,
+
 } from './styles/header'
 
 export default function Header({
@@ -87,3 +91,17 @@ Header.Search = function HeaderSearch({ searchValue, setSearchValue, ...restProp
         />
     </Search>
 }
+
+
+Header.Profile = function HeaderProfile({ children, ...restProps }) {
+    return <Profile {...restProps}>{children}</Profile>
+}
+
+Header.Picture = function HeaderPicture({ src, ...restProps }){
+    return <Picture src={`/images/users/${src}.png`} { ...restProps } />
+}
+
+Header.Dropdown = function HeaderDropdown({ children, ...restProps }){
+    return <Dropdown {...restProps} >{children}</Dropdown>
+}
+
