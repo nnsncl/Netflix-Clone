@@ -13,18 +13,18 @@ export const Background = styled.div`
 
 export const Container = styled.div`
     display: flex;
-    margin: 0 56px;
-    padding: 36px 0;
+    padding: 56px 56px 95px 56px;
     height: 95px;
     justify-content: space-between;
     align-items: center;
+    background: linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(255,255,255,0) 100%);
 
     a {
         display: flex;
     }
 
     @media (max-width: 813px) {
-        margin: 0 30px;
+        padding: 36px 36px 95px 36px;
     }
 `;
 
@@ -129,4 +129,46 @@ export const ButtonLink = styled(ReachRouterLink)`
     }
 `;
 
-export const TextLink = styled.a``;
+export const Search = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+export const SearchIcon = styled.button`
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+
+    img {
+        filter: brightness(0) invert(1);
+        max-width: 16px;
+    }
+
+    &:active, &:focus{
+        outline: none
+    }
+`;
+
+export const SearchInput = styled.input`
+    border: 0;
+    background: transparent;
+    color: white;
+    transition: width .2s;
+    max-height: 56px;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+
+    &::placeholder{
+        color: white;       
+    }
+
+    margin-left: ${({ active }) => ( active === true ? '13px' : '0' )};
+    padding: ${({ active }) => ( active === true ? '0 13px' : '0' )};
+    width: ${({ active }) => ( active === true ? '190px' : '0' )};
+    opacity: ${({ active }) => ( active === true ? '1' : '0' )};
+
+    &:active, &:focus{
+        outline: none
+    }
+`;

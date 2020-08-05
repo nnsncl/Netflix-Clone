@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link as ReachRouterLink } from 'react-router-dom'
 
 import {
@@ -13,6 +13,9 @@ import {
     ButtonLink,
     Group,
     Link,
+    Search,
+    SearchIcon,
+    SearchInput,
 } from './styles/header'
 
 export default function Header({
@@ -68,3 +71,19 @@ Header.Link = function HeaderTextLink({ children, ...restProps }) {
     return <Link {...restProps}>{children}</Link>
 }
 
+Header.Search = function HeaderSearch({ searchValue, setSearchValue, ...restProps }) {
+
+    const [searchActive, setSearchActive] = useState(false)
+
+    return <Search {...restProps} >
+        <SearchIcon onClick={() => setSearchActive(!searchActive)}>
+            <img src='/images/icons/search.png' alt='Search' />
+        </SearchIcon>
+        <SearchInput
+            value={searchValue}
+            onChange={({ target }) => setSearchValue(target.value)}
+            placeholder='Search'
+            active={searchActive}
+        />
+    </Search>
+}
