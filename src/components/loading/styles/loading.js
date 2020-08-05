@@ -12,11 +12,11 @@ export const ReleaseBody = createGlobalStyle`
 `
 
 export const Spinner = styled.div`
-    position: fixed;
     width: 100%;
     height: 100%;
     background-color: black;
     z-index: 999;
+    position: fixed;
     
     :after {
         content: '';
@@ -26,15 +26,21 @@ export const Spinner = styled.div`
         background-image: url(/images/misc/spinner.png);
         background-size: contain;
         background-repeat: no-repeat;
-        margin-top: -150px;
-        margin-left: -75px;
-        width: 150px;
-        height: 150px;
+        margin-top: -5%;
+        margin-left: -2.5%;
+        width: 95px;
+        height: 95px;
         animation-name: spin;
         animation-duration: 1000ms;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
+
+        @media(max-width: 813px){
+            margin-left: -10%;
+        }
     }
+
+
     
     @-ms-keyframes spin {
         from {
@@ -71,15 +77,4 @@ export const Spinner = styled.div`
             transform: rotate(360deg);
         }
     }
-`;
-
-export const Picture = styled.img`
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    border-radius: 100%;
-    top: 50%;
-    left: 50%;
-    margin-top: -95px;
-    margin-left: -23px;
 `;

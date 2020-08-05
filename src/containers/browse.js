@@ -21,7 +21,7 @@ export function BrowseContainer() {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 3000)
+        }, 2000)
     }, [user])
 
     return profile.displayName ? (
