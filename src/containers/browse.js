@@ -31,7 +31,7 @@ export function BrowseContainer({ slides }) {
 
     return profile.displayName ? (
         <>
-            { loading ? <Loading src={user.pictureURL} /> : <Loading.ReleaseBody /> }
+            {loading ? <Loading src={user.pictureURL} /> : <Loading.ReleaseBody />}
             <Header src="dorohedoro" dontShowOnSmallViewPort >
                 <Header.Frame>
                     <Header.Group>
@@ -87,23 +87,26 @@ export function BrowseContainer({ slides }) {
 
             <Card.Group>
                 {slideRows.map((slideItem) => (
-                    <Card key={`${category}-${slideItem.title.toLowercase()}`} >
-                        <Card.Titile>{slideItem.Titile}</Card.Titile>
-                        <Card.Content>
+                    <Card key={`${category}-${slideItem.title.toLowerCase()}`} >
+                        <Card.Title>{slideItem.title.substring(0, slideItem.title.length - 1)}</Card.Title>
+                        <Card.Entities >
                             {slideItem.data.map((item) => (
-                                <Card.Item key={item.docId} item={item}>
+                                <Card.Item key={item.docId} item={item} >
                                     <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
                                     <Card.Meta>
-                                        <Card.Subtitle>{item.title}</Card.Subtitle>
-                                        <Card.Text>{item.genre}</Card.Text>
+                                        <Card.SubTitle>{item.title}</Card.SubTitle>
+                                        <Card.Text>{item.description}</Card.Text>
                                     </Card.Meta>
                                 </Card.Item>
                             ))}
-                        </Card.Content>
+                        </Card.Entities>
+                        <Card.Feature category={category} >
+                            <p>aaaa</p>
+                        </Card.Feature>
+
                     </Card>
                 ))}
             </Card.Group>
-
 
             <FooterContainer />
         </>
