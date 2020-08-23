@@ -7,18 +7,11 @@ export const Container = styled.section`
     min-height: 66.6vh;
     background: black;
     border-radius: 8px;
-    width: 25%;
+    max-width: 414px;
+    width: 100%;
     margin: 96px auto;
     padding: 44px 56px;
     transition: ease .2s;
-
-    @media(max-width: 1441px){
-        width: 50%;
-    }
-
-    @media(max-width: 589px){
-        width: 90%;
-    }
 `;
 export const Frame = styled.form`
     display: flex;
@@ -44,7 +37,7 @@ export const Input = styled.input`
         &::placeholder{
             color:white;
             transition: ease .2s;
-        }
+        }max-
     }
     
     &:focus, &:active{

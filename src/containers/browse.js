@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { Header, Loading } from '../components'
+import { Card, Header, Loading } from '../components'
 import * as ROUTES from '../constants/routes'
 import { FirebaseContext } from '../context/firebase'
 import { ProfileContainer } from './profile'
 import { FooterContainer } from './footer'
 
-export function BrowseContainer() {
+export function BrowseContainer({ slides }) {
     const [profile, setProfile] = useState({});
-    const [category, setCategorie] = useState('series')
+    const [category, setCategory] = useState('series')
     const [searchValue, setSearchValue] = useState('')
     const [loading, setLoading] = useState(true)
+    const [slideRows, setSlideRows] = useState([])
 
     const { firebase } = useContext(FirebaseContext)
 
@@ -24,9 +25,13 @@ export function BrowseContainer() {
         }, 2000)
     }, [user])
 
+    useEffect(() => {
+        setSlideRows(slides[category])
+    }, [slides, category])
+
     return profile.displayName ? (
         <>
-            { loading ? <Loading src={user.pictureURL} /> : <Loading.ReleaseBody /> }
+            {loading ? <Loading src={user.pictureURL} /> : <Loading.ReleaseBody />}
             <Header src="dorohedoro" dontShowOnSmallViewPort >
                 <Header.Frame>
                     <Header.Group>
@@ -37,13 +42,13 @@ export function BrowseContainer() {
                         />
                         <Header.Link
                             active={category === 'series' ? 'true' : 'false'}
-                            onClick={() => setCategorie('series')}
+                            onClick={() => setCategory('series')}
                         >
                             Series
                         </Header.Link>
                         <Header.Link
                             active={category === 'films' ? 'true' : 'false'}
-                            onClick={() => setCategorie('films')}
+                            onClick={() => setCategory('films')}
                         >
                             Films
                         </Header.Link>
@@ -79,6 +84,30 @@ export function BrowseContainer() {
                 </Header.Feature>
 
             </Header>
+
+            <Card.Group>
+                {slideRows.map((slideItem) => (
+                    <Card key={`${category}-${slideItem.title.toLowerCase()}`} >
+                        <Card.Title>{slideItem.title.substring(0, slideItem.title.length - 1)}</Card.Title>
+                        <Card.Entities >
+                            {slideItem.data.map((item) => (
+                                <Card.Item key={item.docId} item={item} >
+                                    <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
+                                    <Card.Meta>
+                                        <Card.SubTitle>{item.title}</Card.SubTitle>
+                                        <Card.Text>{item.description}</Card.Text>
+                                    </Card.Meta>
+                                </Card.Item>
+                            ))}
+                        </Card.Entities>
+                        <Card.Feature category={category} >
+                            <p>aaaa</p>
+                        </Card.Feature>
+
+                    </Card>
+                ))}
+            </Card.Group>
+
             <FooterContainer />
         </>
     ) : (<ProfileContainer user={user} setProfile={setProfile} />)
