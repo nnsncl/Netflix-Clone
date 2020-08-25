@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 
 export const Title = styled.p`
-    font-size: 2.3rem;
+    font-size: 3.6rem;
     color: white;
     font-weight: 800;
-    margin: 56px;
+    margin: 56px 56px 23px 56px;
+
+    @media(max-width: 813px){
+        font-size: 1.9rem;
+        margin: 36px 36px 13px 36px;
+    }
 `;
 
 export const Container = styled.div`
@@ -22,6 +27,7 @@ export const Container = styled.div`
     &:last-of-type {
         margin-bottom: 0;
     }
+
 `;
 
 export const Group = styled.div`
@@ -29,6 +35,12 @@ export const Group = styled.div`
     flex-direction: ${({ flexDirection }) => (flexDirection === 'row' ? 'row' : 'column')};
     ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
     ${({ margin }) => margin && `margin: ${margin}`};
+
+    > ${Container}:first-of-type {
+        @media (min-width: 813px) {
+            margin-top: -190px;
+        }
+    }
 `;
 
 export const SubTitle = styled.p`
@@ -60,14 +72,14 @@ export const Meta = styled.div`
     display: none;
     position: absolute;
     bottom: 0;
-    padding: 9px;
-    background: black;
+    padding: 13px;
+    background: linear-gradient(0deg, rgba(0,0,0,3) 0%, rgba(255,255,255,0) 100%);
+    width: 100%;
 `;
 
 export const Image = styled.img`
     border: 0;
     width: 100%;
-    max-width: 25vw;
     cursor: pointer;
     height: auto;
     padding: 0;
@@ -85,13 +97,13 @@ export const Item = styled.div`
     
     &:hover {
         transform: scale(1.3);
-        z-index: 99;
+        z-index: 2;
     }
     
     @media (min-width: 813px) {
         &:hover ${Meta}, &:hover ${Text}, &:hover ${SubTitle} {
             display: block;
-            z-index: 100;
+            z-index: 2;
         }
     }
     
@@ -132,7 +144,6 @@ export const Feature = styled.div`
     height: 560px;
     background-position-x: right;
     background-repeat: no-repeat;
-    background-color: black;
     
     @media (max-width: 1000px) {
         height: auto;
@@ -179,7 +190,7 @@ export const Content = styled.div`
 `;
 
 export const Maturity = styled.div`
-    background-color: ${({ rating }) => (rating >= 15 ? 'red' : 'green')};
+    border-color: ${({ rating }) => (rating >= 15 ? 'tomato' : 'green')};
     border-radius: 15px;
     width: 20px;
     padding: 5px;

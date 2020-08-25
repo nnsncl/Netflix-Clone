@@ -5,9 +5,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 80%;
-    height: 100%;
-    margin: 190px auto;
+    padding: 10% 0;
 `;
 export const Title = styled.h1`
     font-size: 5.6rem;

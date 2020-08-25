@@ -15,6 +15,7 @@ export const Frame = styled.div`
 
     @media(max-width: 813px){
         width: 100%;
+        margin: 95px auto;
     }
 `;
 
@@ -28,4 +29,8 @@ export const Text = styled.p`
     font-weight: 400;
     line-height: 1.1;
     color: white;
+
+    @media(max-width: 813px) {
+        font-size: 2.3rem;
+    }
 `;

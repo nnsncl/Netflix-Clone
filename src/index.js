@@ -17,6 +17,7 @@ const firebaseConfig = {
     appId: "1:646375904684:web:e957817b46a6427a415609"
 }
 
+// eslint-disable-next-line
 const firebase = window.firebase.initializeApp(firebaseConfig)
 
 // Uncomment to seed database with seed.js content

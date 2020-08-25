@@ -79,7 +79,7 @@ export function BrowseContainer({ slides }) {
                 <Header.Feature>
                     <Header.LogoTitle src='/images/misc/dorohedoro_logo.png' alt='dorohedoro' />
                     {/* <Header.Title>Dorohedoro</Header.Title> */}
-                    <Header.Content>Sorcerers regularly visit the Hole in order to practice their magic on human victims, leading to huge numbers of disfigured survivors. Hospitals have been set up to deal with the ever-growing numbers of magic victims, but humans can do little to repel sorcerers.</Header.Content>
+                    <Header.Content>Sorcerers regularly visit the Hole in order to practice their magic on human victims, leading to huge numbers of disfigured survivors.</Header.Content>
                     <Header.Button>Watch now</Header.Button>
                 </Header.Feature>
 
@@ -95,7 +95,7 @@ export function BrowseContainer({ slides }) {
                                     <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
                                     <Card.Meta>
                                         <Card.SubTitle>{item.title}</Card.SubTitle>
-                                        <Card.Text>{item.description}</Card.Text>
+                                        <Card.Text>{`${item.maturity } +`}</Card.Text>
                                     </Card.Meta>
                                 </Card.Item>
                             ))}

@@ -6,9 +6,9 @@ export const Background = styled.div`
     flex-direction: column;
     background: url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover no-repeat;
 
-    @media (max-width: 813px) {
+    ${'' /* @media (max-width: 813px) {
         ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;` }
-    }
+    } */}
 `;
 
 export const Container = styled.div`
@@ -24,25 +24,30 @@ export const Container = styled.div`
     }
 
     @media (max-width: 813px) {
-        padding: 36px 36px 95px 36px;
+        padding: 36px;
     }
 `;
 
 export const Feature = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 190px 56px 95px 56px;
+    padding: 95px 56px 190px 56px;
     width: 50%;
     max-width: 1589px;
-    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%);
+    background: linear-gradient(45deg, rgba(0,0,0,9) 0%, rgba(255,255,255,0) 33%);
 
     @media(max-width: 1281px){
         width: 66.6%;
     }
 
     @media(max-width: 813px){
-        display: none;
+        width: 100%;
+        padding: 56px;
     }
+
+    ${'' /* @media(max-width: 813px){
+        display: none;
+    } */}
 `;
 
 export const Group = styled.div`
@@ -86,11 +91,17 @@ export const Title = styled.h2`
 
 export const Content = styled.p`
     display: block;
-    font-size: 2.3rem;
+    font-size: 3.6rem;
     font-weight: 400;
     line-height: 1.3;
     margin-bottom: 59px;
     color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.45);
+
+    @media(max-width: 813px) {
+        font-size: 1.9rem;
+        line-height: 1.2;
+    }
 `;
 
 export const Button = styled.button`

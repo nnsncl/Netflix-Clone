@@ -20,10 +20,11 @@ export const Title = styled.h1`
     overflow-wrap: break-word;
 
     @media(max-width: 813px) {
-        font-size: 8.3rem;
+        font-size: 5.6rem;
         letter-spacing: -3px;
+        margin: 36px 0;
     }
-`;
+`; 
 export const Subtitle = styled.h2`
     font-size: 3.6rem;
     font-weight: 400;
