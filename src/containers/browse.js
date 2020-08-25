@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
+import Fuse from 'fuse.js'
 import { Card, Header, Loading } from '../components'
 import * as ROUTES from '../constants/routes'
 import { FirebaseContext } from '../context/firebase'
@@ -29,10 +30,23 @@ export function BrowseContainer({ slides }) {
         setSlideRows(slides[category])
     }, [slides, category])
 
+    useEffect(() => {
+        const fuse = new Fuse(slideRows, { keys: ['data.description', 'data.title', 'data.genre'] });
+        console.log(fuse) 
+        const results = fuse.search(searchValue).map(({ item }) => item);
+       console.log(results) 
+        if (slideRows.length > 0 && searchValue.length > 0) {
+            setSlideRows(results);
+        } else {
+            setSlideRows(slides[category]);
+        }
+        // eslint-disable-next-line
+      }, [searchValue])
+
     return profile.displayName ? (
         <>
             {loading ? <Loading src={user.pictureURL} /> : <Loading.ReleaseBody />}
-            <Header src="dorohedoro" dontShowOnSmallViewPort >
+            <Header src="dorohedoro">
                 <Header.Frame>
                     <Header.Group>
                         <Header.Logotype
