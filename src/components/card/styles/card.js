@@ -190,10 +190,10 @@ export const Content = styled.div`
 `;
 
 export const Maturity = styled.div`
-    border-color: ${({ rating }) => (rating >= 15 ? 'tomato' : 'green')};
-    border-radius: 15px;
-    width: 20px;
-    padding: 5px;
+    background: ${({ rating }) => (rating >= 15 ? '#db0510' : '#737373')};
+    border-radius: 100%;
+    width: auto;
+    padding: 13px;
     text-align: center;
     color: white;
     font-weight: bold;

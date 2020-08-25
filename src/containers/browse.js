@@ -7,7 +7,7 @@ import { FooterContainer } from './footer'
 
 export function BrowseContainer({ slides }) {
     const [profile, setProfile] = useState({});
-    const [category, setCategory] = useState('series')
+    const [category, setCategory] = useState('films')
     const [searchValue, setSearchValue] = useState('')
     const [loading, setLoading] = useState(true)
     const [slideRows, setSlideRows] = useState([])
@@ -40,17 +40,17 @@ export function BrowseContainer({ slides }) {
                             src="/images/misc/logo.svg"
                             alt='Logotype Netflix'
                         />
+                           <Header.Link
+                            active={category === 'films' ? 'true' : 'false'}
+                            onClick={() => setCategory('films')}
+                        >
+                            Films
+                        </Header.Link>
                         <Header.Link
                             active={category === 'series' ? 'true' : 'false'}
                             onClick={() => setCategory('series')}
                         >
                             Series
-                        </Header.Link>
-                        <Header.Link
-                            active={category === 'films' ? 'true' : 'false'}
-                            onClick={() => setCategory('films')}
-                        >
-                            Films
                         </Header.Link>
                     </Header.Group>
                     <Header.Group>
@@ -88,7 +88,8 @@ export function BrowseContainer({ slides }) {
             <Card.Group>
                 {slideRows.map((slideItem) => (
                     <Card key={`${category}-${slideItem.title.toLowerCase()}`} >
-                        <Card.Title>{slideItem.title.substring(0, slideItem.title.length - 1)}</Card.Title>
+                        <Card.Title>{slideItem.title}</Card.Title>
+                        {/* <Card.Title>{slideItem.title.substring(0, slideItem.title.length - 1)}</Card.Title> */}
                         <Card.Entities >
                             {slideItem.data.map((item) => (
                                 <Card.Item key={item.docId} item={item} >
@@ -100,10 +101,7 @@ export function BrowseContainer({ slides }) {
                                 </Card.Item>
                             ))}
                         </Card.Entities>
-                        <Card.Feature category={category} >
-                            <p>aaaa</p>
-                        </Card.Feature>
-
+                        <Card.Feature category={category} />
                     </Card>
                 ))}
             </Card.Group>
