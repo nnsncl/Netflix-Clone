@@ -29,12 +29,16 @@ export default function Signin() {
             .auth()
             .signInWithEmailAndPassword(emailAddress, password)
             .then(() => {
+
+                history.push(ROUTES.BROWSE)
+            }
+            ).catch((error) => {
                 setemailAddress('');
                 setPaswword('')
                 setError('')
-                history.push(ROUTES.BROWSE)
+                setError(error.message)
             }
-            ).catch((error) => setError(error.message))
+            )
     }
 
     return (
